@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA EXCHANGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        Fast • Secure • Reliable Money Exchange
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo" id="logo">NEXORA</div>
+        </div>
+        <div class="menu-btn" id="menuBtn">☰</div>
+    </header>
+
+    <!-- Side Menu (Mobile) -->
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <div class="side-logo">NEXORA<br><span>EXCHANGE</span></div>
+            <div class="close-btn" id="closeBtn">✕</div>
+        </div>
+
+        <nav class="side-nav">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#">How It Works</a>
+            <a href="#">Rates</a>
+            <a href="#">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="https://wa.me/2348141984137" class="side-cta" target="_blank">Get Started</a>
+    </div>
+
+    <!-- Overlay when menu is open -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>WHICH TAGS OR BANK DO YOU NEED INSTANTLY?</h1>
+        <p class="subtitle">
+            Cash App • PayPal • Chime • Apple Pay • Zelle • MoneyGram • Bank Transfer and more.
+            Fast, safe and trusted service.
+        </p>
+
+        <div class="buttons">
+            <a href="https://wa.me/2348141984137" class="btn-primary" target="_blank">Start Exchange</a>
+            <a href="#services" class="btn-secondary">Our Services</a>
+        </div>
+    </section>
+
+  <!-- About Section -->
+<section class="about" id="about">
+    <h2>NEXORA EXCHANGE</h2>
+    <p class="about-text">
+        We provides a fast, secure, and reliable exchange experience designed for people who value speed, trust, and convenience.
+    </p>
+
+    <div class="features">
+        <!-- Fast -->
+        <div class="feature-card fast">
+            <div class="feature-overlay">
+                <h3>Fast</h3>
+                <p>Quick exchange processing</p>
+            </div>
+        </div>
+
+        <!-- Secure -->
+        <div class="feature-card secure">
+            <div class="feature-overlay">
+                <h3>Secure</h3>
+                <p>Safety-focused transactions</p>
+            </div>
+        </div>
+
+        <!-- Global -->
+        <div class="feature-card global">
+            <div class="feature-overlay">
+                <h3>Global</h3>
+                <p>Exchange made simple worldwide</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Services -->
+<section class="services" id="services">
+    <h2>We Exchange</h2>
+    <div class="service-list">
+
+        <div class="service-item">
+            <div class="icon">💵</div>
+            <span>Cash App</span>
+        </div>
+
+        <div class="service-item">
+            <div class="icon">💙</div>
+            <span>PayPal</span>
+        </div>
+
+        <div class="service-item">
+            <div class="icon">🏦</div>
+            <span>Chime</span>
+        </div>
+
+        <div class="service-item">
+            <div class="icon">🍎</div>
+            <span>Apple Pay</span>
+        </div>
+
+        <div class="service-item">
+            <div class="icon">⚡</div>
+            <span>Zelle</span>
+        </div>
+
+        <div class="service-item">
+            <div class="icon">🌐</div>
+            <span>MoneyGram</span>
+        </div>
+
+        <div class="service-item">
+            <div class="icon">🏛️</div>
+            <span>Bank Transfer</span>
+        </div>
+
+        <div class="service-item">
+            <div class="icon">✨</div>
+            <span>And More</span>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/2348141984137" class="whatsapp-btn" target="_blank">
+            <span>💬</span>
+        </a>
+
+        <!-- Small NEXORA Logo (under WhatsApp) -->
+        <a href="#" class="nexora-logo-btn">
+            <span>NX</span>
+        </a>
+    </div>
+
+<!-- ==================== EXCHANGE FORM ==================== -->
+<section class="exchange-section" id="exchange">
+    <h2>Let's Get You Paid</h2>
+
+    <div class="exchange-card">
+
+        <!-- Currency -->
+        <div class="form-group">
+            <label>Select Currency</label>
+            <select id="currency">
+                <option value="1">USD - United States</option>
+                <option value="1.30">GBP - United Kingdom</option>
+                <option value="0.73">CAD - Canada</option>
+                <option value="0.66">AUD - Australia</option>
+                <option value="1.08">EUR - Europe</option>
+            </select>
+        </div>
+
+        <!-- Amount -->
+        <div class="form-group">
+            <label>Enter Amount</label>
+            <input type="number" id="amount" placeholder="e.g. 100" min="1">
+        </div>
+
+        <!-- Payment Method -->
+        <div class="form-group">
+            <label>Exchange rate payment</label>
+            <select id="method">
+                <option value="">Select Method</option>
+                <option value="1385">BTC</option>
+                <option value="1386">USDT</option>
+                <option value="1250">Cash App</option>
+                <option value="1250">Zelle</option>
+                <option value="1200">Venmo</option>
+                <option value="1250">PayPal</option>
+                <option value="1150">Apple Pay</option>
+                <option value="1300">Western Union / MoneyGram</option>
+                <option value="1300">Cash Mailing</option>
+            </select>
+        </div>
+
+        <button class="submit-btn" id="submitBtn">Submit Request</button>
+    </div>
+</section>
+
+<!-- Result Box -->
+<section class="exchange-section-result">
+    <div class="result-box" id="resultBox" style="display: none;">
+        <h3>Exchange Processing</h3>
+        <p class="calculated">You will receive: <span id="totalAmount">₦0</span></p>
+        <div class="timer">
+            Time remaining: <span id="countdown">5:00</span>
+        </div>
+        <p class="note" id="statusNote">We've received your request — chat with us below while we process it.</p>
+
+        <div class="chat-box">
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input-row">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- ==================== PARTNER SECTION ==================== -->
+<section class="partner-section">
+    <div class="partner-content">
+        <h2>YOUR SEARCHING<br>END HERE!</h2>
+        <p class="partner-text">
+            Join thousands who trust NEXORA EXCHANGE for fast, secure and reliable money exchange. 
+            Experience seamless transactions with Cash App, PayPal, Zelle, BTC, USDT and more — 
+            all in one trusted platform.
+        </p>
+        <a href="https://wa.me/2348141984137" class="partner-btn" target="_blank">
+            Make Nexora your partner
+        </a>
+    </div>
+
+    <!-- Two Phone Cards -->
+    <div class="phones">
+        <!-- Card 1 -->
+        <div class="phone-card">
+            <div class="phone-header">
+                <div class="avatar">NX</div>
+                <div>
+                    <strong>NEXORA</strong>
+                    <p>Live Rates</p>
+                </div>
+            </div>
+            <div class="rate-item">
+                <span>Cash App</span>
+                <span class="green">₦1,250</span>
+            </div>
+            <div class="rate-item">
+                <span>PayPal</span>
+                <span class="green">₦1,250</span>
+            </div>
+            <div class="rate-item">
+                <span>Zelle</span>
+                <span class="green">₦1,250</span>
+            </div>
+            <div class="rate-item">
+                <span>Venmo</span>
+                <span class="green">₦1,200</span>
+            </div>
+            <div class="rate-item">
+                <span>Apple Pay</span>
+                <span class="green">₦1,150</span>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="phone-card">
+            <div class="phone-header">
+                <div class="avatar">NX</div>
+                <div>
+                    <strong>NEXORA</strong>
+                    <p>Crypto & More</p>
+                </div>
+            </div>
+            <div class="rate-item">
+                <span>BTC</span>
+                <span class="green">₦1,385</span>
+            </div>
+            <div class="rate-item">
+                <span>USDT</span>
+                <span class="green">₦1,386</span>
+            </div>
+            <div class="rate-item">
+                <span>Western Union</span>
+                <span class="green">₦1,300</span>
+            </div>
+            <div class="rate-item">
+                <span>MoneyGram</span>
+                <span class="green">₦1,300</span>
+            </div>
+            <div class="rate-item">
+                <span>Cash Mailing</span>
+                <span class="green">₦1,300</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="exchange-anywhere">
+
+    <h2>
+        Exchange <span>Where You Want.<br>
+        <span>When You Want.
+    </h2>
+
+    <p>
+        Exchange your digital assets with confidence on Nexora Exchange.
+        Buy and sell Cash App, PayPal, Chime, Apple Pay, Zelle,
+        Bank Transfer, MoneyGram and more from any mobile phone,
+        tablet or desktop. We provide fast, secure and reliable
+        transactions 24/7 with trusted customer support whenever
+        you need us.
+    </p>
+
+    <a href="#exchange" class="exchange-btn">
+        Start Your Exchange Now
+    </a>
+
+    <div class="contact-box">
+        <h3>Need Help? Contact Here</h3>
+
+        <p>📞 0814 198 4137</p>
+        <p>📞 0802 113 7896</p>
+        <p>📧 support@nexoraexchange.com</p>
+        <p>📷 @nexorapaymenthub</p>
+
+        <span>Available 24 Hours • 7 Days A Week</span>
+    </div>
+
+  </section>
+
+          <section class="vip-dashboard">
+
+    <div class="vip-title">
+        <h2>💎 VIP EXCHANGE DASHBOARD</h2>
+        <p>Premium statistics for our trusted exchange platform.</p>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <span>👥</span>
+            <h3>128+</h3>
+            <p>Total VIP Clients</p>
+        </div>
+
+        <div class="stat-card">
+            <span>💰</span>
+            <h3>₦86.75M</h3>
+            <p>Total Exchange Volume</p>
+        </div>
+
+        <div class="stat-card">
+            <span>📈</span>
+            <h3>₦8.42M</h3>
+            <p>Total Profit</p>
+        </div>
+
+        <div class="stat-card">
+            <span>⚡</span>
+            <h3>99.8%</h3>
+            <p>Success Rate</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🟢</span>
+            <h3>21</h3>
+            <p>Active Orders</p>
+        </div>
+
+    </div>
+
+    <h2 class="vip-heading">👑 VIP MEMBERSHIP TIERS</h2>
+
+    <div class="vip-cards">
+
+        <div class="vip-card">
+            <h3>💠 ELITE VIP</h3>
+            <h4>₦5,000,000+</h4>
+            <p>Exchange Volume</p>
+
+            <div class="bonus">+2% VIP BONUS</div>
+
+            <ul>
+                <li>✔ Priority Processing</li>
+                <li>✔ Premium Support</li>
+                <li>✔ Better Exchange Rates</li>
+            </ul>
+        </div>
+
+        <div class="vip-card premium">
+            <h3>💎 PREMIUM VIP</h3>
+            <h4>₦15,000,000+</h4>
+            <p>Exchange Volume</p>
+
+            <div class="bonus">+3% VIP BONUS</div>
+
+            <ul>
+                <li>✔ Faster Transactions</li>
+                <li>✔ Exclusive Rates</li>
+                <li>✔ VIP Customer Service</li>
+            </ul>
+        </div>
+
+        <div class="vip-card royal">
+            <h3>👑 ROYAL VIP</h3>
+            <h4>₦25,000,000+</h4>
+            <p>Exchange Volume</p>
+
+            <div class="bonus">+5% VIP BONUS</div>
+
+            <ul>
+                <li>✔ Highest Rates</li>
+                <li>✔ Instant Priority</li>
+                <li>✔ Personal VIP Manager</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="vip-note">
+        ⭐ Unlock higher exchange rates, priority processing and exclusive VIP rewards as your exchange volume grows with <strong>NEXORA EXCHANGE</strong>.
+    </div>
+
+          </section>
+
+          <footer class="footer">
+
+    <div class="footer-logo">
+        <h2>NEXORA <span>EXCHANGE</span></h2>
+        <p>Where Security Meets Speed.</p>
+    </div>
+
+    <div class="footer-grid">
+
+        <div class="footer-box">
+            <h3>📜 Legal</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">AML / KYC Policy</a>
+            <a href="#">Risk Disclosure</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>💬 Help & Support</h3>
+
+            <p>📞 0814 198 4137</p>
+            <p>📞 0802 113 7896</p>
+            <p>📧 support@nexoraexchange.com</p>
+            <p>📷 @nexorapaymenthub</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>🏢 About Nexora</h3>
+
+            <p>
+                NEXORA EXCHANGE provides fast,
+                secure and trusted exchange services
+                for Cash App, PayPal, Chime,
+                Apple Pay, Zelle, MoneyGram,
+                Bank Transfer and more.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-notice">
+
+        <p>
+            <strong>Disclaimer:</strong><br><br>
+
+            NEXORA EXCHANGE operates as a digital
+            exchange platform committed to secure,
+            transparent and reliable transactions.
+
+            Users are responsible for ensuring that
+            every transaction complies with the laws
+            and regulations applicable in their country.
+
+            Always verify recipient information before
+            confirming any exchange request.
+        </p>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 NEXORA EXCHANGE.
+        All Rights Reserved.
+
+    </div>
+
+          </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+      </html>
