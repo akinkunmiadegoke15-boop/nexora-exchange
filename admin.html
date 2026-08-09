@@ -306,10 +306,15 @@
     input.addEventListener("keypress", (e) => { if (e.key === "Enter") send(); });
   }
 
+  function fixHeights() {
+    const h = window.innerHeight + "px";
+    document.body.style.height = h;
+    chatListEl.style.height = h;
+  }
+  fixHeights();
+  window.addEventListener("resize", fixHeights);
   if (window.visualViewport) {
-    window.visualViewport.addEventListener("resize", () => {
-      document.body.style.height = window.visualViewport.height + "px";
-    });
+    window.visualViewport.addEventListener("resize", fixHeights);
   }
 </script>
 
