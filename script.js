@@ -1,3 +1,6 @@
+window.onerror = function(msg, url, line) {
+  alert("JS ERROR: " + msg + " at line " + line);
+};
 // ============ Anonymous Auth ============
 let currentUser = null;
 firebase.auth().signInAnonymously().catch((error) => {
