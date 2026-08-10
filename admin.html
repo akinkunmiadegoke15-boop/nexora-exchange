@@ -214,15 +214,18 @@
   const ADMIN_EMAIL = "boytushexchange@gmail.com";
 
   firebase.auth().onAuthStateChanged((user) => {
+  if (user && user.email === ADMIN_EMAIL) {
+    loginScreen.style.display = "none";
+    adminApp.style.display = "flex";
+    startListeningToChats();
+  } else {
+    loginScreen.style.display = "flex";
+    adminApp.style.display = "none";
     if (user) {
-      loginScreen.style.display = "none";
-      adminApp.style.display = "flex";
-      startListeningToChats();
-    } else {
-      loginScreen.style.display = "flex";
-      adminApp.style.display = "none";
+      firebase.auth().signOut();
     }
-  });
+  }
+});
 
   function tryUnlock() {
     const password = passInput.value;
