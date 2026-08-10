@@ -1,3 +1,12 @@
+// ============ Anonymous Auth ============
+let currentUser = null;
+firebase.auth().signInAnonymously().catch((error) => {
+  console.error("Auth error:", error);
+});
+firebase.auth().onAuthStateChanged((user) => {
+  currentUser = user;
+});
+
 // ============ Logo Animation ============
 const logos = ["NEXORA", "NEXORA EXCHANGE", "NX EXCHANGE", "NEXORA"];
 let logoIndex = 0;
@@ -74,18 +83,28 @@ submitBtn.addEventListener("click", function () {
 
   startCountdown();
 
+  if (!currentUser) {
+    alert("Still connecting, please try again in a moment.");
+    return;
+  }
+
   const chatRef = db.ref("chats").push();
   currentChatId = chatRef.key;
   localStorage.setItem("nexoraChatId", currentChatId);
 
   chatRef.set({
+    userId: currentUser.uid,
     currency: currencyText,
     amount: amount,
     method: methodText,
     total: totalFormatted,
     status: "pending",
     createdAt: Date.now()
-  });
+}).then(() => {
+    alert("Request saved successfully!");
+}).catch((error) => {
+    alert("WRITE ERROR: " + error.message);
+});
 
   chatRef.child("messages").push({
     sender: "customer",
