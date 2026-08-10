@@ -321,7 +321,7 @@ body {
 }
 
 .feature-card {
-    height: 160px;
+    height: 240px;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
@@ -356,22 +356,22 @@ body {
 }
 
 .feature-overlay h3 {
-    font-size: 26px;
-    font-weight: 800;
+    font-size: 34px;
+    font-weight: 900;
     color: #ffffff;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .feature-overlay p {
-    font-size: 15px;
+    font-size: 17px;
     color: #f0f0f0;
 }
 
 .features {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    max-width: 400px;
+    gap: 20px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -1141,4 +1141,4 @@ padding-top:25px;
     color: #000;
     font-weight: 700;
     cursor: pointer;
-  }
+}
