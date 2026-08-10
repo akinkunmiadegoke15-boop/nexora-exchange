@@ -1,6 +1,3 @@
-window.onerror = function(msg, url, line) {
-  alert("JS ERROR: " + msg + " at line " + line);
-};
 // ============ Anonymous Auth ============
 let currentUser = null;
 firebase.auth().signInAnonymously().catch((error) => {
@@ -103,10 +100,8 @@ submitBtn.addEventListener("click", function () {
     total: totalFormatted,
     status: "pending",
     createdAt: Date.now()
-}).then(() => {
-    alert("Request saved successfully!");
 }).catch((error) => {
-    alert("WRITE ERROR: " + error.message);
+    console.error("Write error:", error);
 });
 
   chatRef.child("messages").push({
